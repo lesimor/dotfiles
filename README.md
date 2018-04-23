@@ -4,7 +4,7 @@
 Installing
 ===
 ```
-git clone git://github.com/victormours/dotfiles.git ~/.dotfiles
+git clone git://github.com/lesimor/dotfiles.git ~/.dotfiles
 ~/.dotfiles/install.sh
 ```
 - Modify the gitconfig so that you don't use my name ;)

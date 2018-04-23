@@ -1,12 +1,27 @@
 # Git essentials
-alias d='git diff'
-alias s='git status'
-alias c='git checkout'
+alias gst='git status'
+alias gb='git branch'
+alias gbv='git branch -v'
 
-alias b='git branch -v'
+# git checkout <branch>
+function gc()
+{
+    git checkout ${1-master}
+}
 
-alias cm='git checkout master'
-alias gd='git checkout develop'
+# git branch sync with remote 
+# checkout and pull
+function gbs()
+{
+    git checkout ${1-master}
+    git pull ${2-origin} master
+} 
+
+# push
+function gp()
+{
+    git push -u ${1-origin} $(git rev-parse --abbrev-ref HEAD)
+} 
 
 alias f='git add --all :/; git commit -m "fix"'
 alias fp='git add --all :/; git commit -m "fix"; git push'
